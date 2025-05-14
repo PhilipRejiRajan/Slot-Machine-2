@@ -4,6 +4,13 @@ import {
     getWinnings
 } from './gameLogic.js';
 
+const SYMBOL_EMOJIS = {
+    A: "💎",
+    B: "🍒",
+    C: "🍇",
+    D: "🍋"
+};
+
 const depositInput = document.getElementById("deposit");
 const depositBtn = document.getElementById("deposit-btn");
 const balanceDisplay = document.getElementById("balance");
@@ -77,7 +84,9 @@ function displaySlotGrid(rows) {
     for (let row of rows) {
         for (let symbol of row) {
             const cell = document.createElement("div");
-            cell.innerText = symbol;
+            cell.innerText = SYMBOL_EMOJIS[symbol];
+
+            cell.classList.add("slot-cell", "spin-anim")
             slotMachineDisplay.appendChild(cell);
         }
     }

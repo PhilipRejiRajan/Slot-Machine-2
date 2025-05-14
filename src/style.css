@@ -75,3 +75,35 @@ button:hover{
     font-size: 18px;
     color: #00ffcc;
 }
+
+.slot-cell {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border: 2px solid #666;
+    border-radius: 10px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.2) rotate(-30deg);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1) rotate(10deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.spin-anim {
+    animation: pop-in 0.4s ease;
+}
