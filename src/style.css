@@ -6,7 +6,7 @@
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: #660066;
     color: #f8f8f8;
     padding: 30px;
     text-align: center;
@@ -15,6 +15,7 @@ body{
 h1{
     margin-bottom: 20px;
     font-size: 36px;
+    color: #f8f8f8;
 }
 
 #status, #controls, #message{
@@ -90,20 +91,21 @@ button:hover{
     transition: transform 0.3s ease;
 }
 
-@keyframes pop-in {
+@keyframes spinOnce {
     0% {
-        transform: scale(0.2) rotate(-30deg);
+        transform: rotate(0deg);
         opacity: 0;
     }
-    60% {
-        transform: scale(1.1) rotate(10deg);
+    50% {
+        transform: rotate(360deg);
         opacity: 1;
     }
     100% {
-        transform: scale(1) rotate(0deg);
+        transform: rotate(360deg);
+        opacity: 1;
     }
 }
 
 .spin-anim {
-    animation: pop-in 0.4s ease;
+    animation: spinOnce 0.4s ease;
 }
