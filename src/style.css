@@ -15,7 +15,6 @@ body{
 h1{
     margin-bottom: 20px;
     font-size: 36px;
-    color: #f8f8f8;
 }
 
 #status, #controls, #message{
